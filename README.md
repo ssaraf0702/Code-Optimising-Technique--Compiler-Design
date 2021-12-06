@@ -1,4 +1,4 @@
-# Compiler Optimising Techniques
+# Code Optimising Techniques - Compiler Design
 Different optimisation techniques implemented
 
 ## INTRODUCTION

@@ -7,7 +7,7 @@ def get_operator_fn(op):
         '+' : operator.add,
         '-' : operator.sub,
         '*' : operator.mul,
-        '/' : operator.div,
+        '/' : operator.truediv,
         '%' : operator.mod,
         '^' : operator.xor,
         }[op]
@@ -38,7 +38,7 @@ for i in range(len(content)):
 			else:
 				if var_list[0] in constant_table.keys():
 					Assignexpr[1]=constant_table[var_list[0]] #Case 1
-			print str(Assignexpr[0])+'='+str(Assignexpr[1])
+			print (str(Assignexpr[0])+'='+str(Assignexpr[1]))
 		#RHS contains multiple operands - 4 types
 		# Type 1 - op1 is digit op2 is digit
 		# Type 2 - op1 is digit op2 is variable
@@ -79,12 +79,12 @@ for i in range(len(content)):
 					Assignexpr[1]=str(op1)+str(op)+str(constant_table[op2])
 			if constant_value!="NOCHANGE":
 				Assignexpr[1]=constant_value
-			print str(Assignexpr[0])+'='+str(Assignexpr[1])
+			print (str(Assignexpr[0])+'='+str(Assignexpr[1]))
 	elif ':' in content[i]:
 		constant_table={}
-		print content[i]
+		print (content[i])
 	else:
-		print content[i]							
+		print (content[i])							
 #print constant_table
 
 
